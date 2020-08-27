@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/isnakolah/lead_manager.git",
   "scripts": {
-    "dev": "webpack --mode development ./lead_manager/frontend/src/index.js --output ./lead_manager/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development --watch ./lead_manager/frontend/src/index.js --output ./lead_manager/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./lead_manager/frontend/src/index.js --output ./lead_manager/frontend/static/frontend/main.js"
   },
   "author": "Daniel Nakolah <nakolahdaniel1@gmail.com>",
@@ -19,8 +19,13 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   }
 }
