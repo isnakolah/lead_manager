@@ -46,6 +46,8 @@ const Leads = props => {
 
 Leads.propTypes = {
   leads: PropTypes.array.isRequired,
+  getLeads: PropTypes.func.isRequired,
+  deleteLead: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
