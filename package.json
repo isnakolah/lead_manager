@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/isnakolah/lead_manager.git",
+  "scripts": {
+    "dev": "webpack --mode development ./lead_manager/frontend/src/index.js --output ./lead_manager/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./lead_manager/frontend/src/index.js --output ./lead_manager/frontend/static/frontend/main.js"
+  },
   "author": "Daniel Nakolah <nakolahdaniel1@gmail.com>",
   "license": "MIT",
   "devDependencies": {
