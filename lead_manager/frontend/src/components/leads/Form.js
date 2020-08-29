@@ -19,6 +19,11 @@ const Form = props => {
     e.preventDefault();
     const lead_add = { ...lead };
     props.addLead(lead_add);
+    setLead({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
