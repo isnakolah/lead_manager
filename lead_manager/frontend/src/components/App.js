@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 import { Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
@@ -22,13 +28,17 @@ class App extends Component {
     return (
       <Provider store={store}>
         <AlertProvider template={AlertTemplate} {...alertOptions}>
-          <>
-            <Header />
-            <Alerts />
-            <div className="container">
-              <Dashboard />
-            </div>
-          </>
+          <Router>
+            <>
+              <Header />
+              <Alerts />
+              <div className="container">
+                <Switch>
+                  <Route exact path="/" component={Dashboard} />
+                </Switch>
+              </div>
+            </>
+          </Router>
         </AlertProvider>
       </Provider>
     );
