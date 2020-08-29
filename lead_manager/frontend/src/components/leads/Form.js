@@ -11,9 +11,8 @@ const Form = props => {
     message: "",
   });
 
-  const onChange = ({ target }) => {
+  const onChange = ({ target }) =>
     setLead({ ...lead, [target.name]: target.value });
-  };
 
   const onSubmit = e => {
     e.preventDefault();
