@@ -26,7 +26,7 @@ Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
 We will be using [yarn](https://yarnpkg.com/) package manager.
 
 Clone the repo.
-Current directory: \$
+Current directory: _\$_
 
 ```sh
 $ git clone https://github.com/isnakolah/lead_manager.git
@@ -36,7 +36,7 @@ $ git clone https://github.com/isnakolah/lead_manager.git
 Installation procedure for Mac and Linux based systems
 
 Install the node dependencies and devDependencies.
-Current directory: \$
+Current directory: _\$_
 
 ```sh
 $ cd lead_manager
@@ -45,7 +45,7 @@ $ yarn add -d
 ```
 
 Install the node dependencies and devDependencies.
-Current directory: lead_manager/
+Current directory: _\$ lead_manager/_
 
 ```sh
 $ cd lead_manager/
@@ -59,25 +59,21 @@ Use the .env-example in lead_manager/lead_manager/.env-example to configure your
 
 ## Running the application
 
-Open a seperate terminal in the base folder \$ lead_manager/
+Open a seperate terminal in the base folder _\$ lead_manager/_
 
 ```sh
 $ yarn run dev
 
 ```
 
-In the terminal with path \$ lead_manager/lead_manager/
+In the terminal with path _\$ lead_manager/lead_manager/_
 
 ```sh
 $ python manage.py runserver
 
 ```
 
-```sh
-
-Open [http://127.0.0.1:8000/#/](http://127.0.0.1:8000/#/)
-
-```
+**Open [http://127.0.0.1:8000/#/](http://127.0.0.1:8000/#/)**
 
 Register a user to add and delete Leads.
 
