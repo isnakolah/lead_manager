@@ -4,12 +4,13 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import { logout } from "../../actions/auth";
+import HeaderLink from "../common/HeaderLink";
 
 const Header = ({ auth, logout }) => {
   const { isAuthenticated, user } = auth;
 
   const authLinks = (
-    <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+    <>
       <span className="navbar-text mr-3">
         <strong>{user ? `Welcome ${user.username}` : ""}</strong>
       </span>
@@ -21,22 +22,14 @@ const Header = ({ auth, logout }) => {
           Logout
         </button>
       </li>
-    </ul>
+    </>
   );
 
   const guestLinks = (
-    <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li className="nav-item">
-        <Link to="/register" className="nav-link">
-          Register
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link to="/login" className="nav-link">
-          Login
-        </Link>
-      </li>
-    </ul>
+    <>
+      <HeaderLink to="/register">Register</HeaderLink>
+      <HeaderLink to="/login">Login</HeaderLink>
+    </>
   );
 
   return (
@@ -58,7 +51,9 @@ const Header = ({ auth, logout }) => {
             Lead Manager
           </a>
         </div>
-        {isAuthenticated ? authLinks : guestLinks}
+        <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+          {isAuthenticated ? authLinks : guestLinks}
+        </ul>
       </div>
     </nav>
   );

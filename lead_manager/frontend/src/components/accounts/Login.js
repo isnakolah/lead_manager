@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+
 import { login } from "../../actions/auth";
+
+import Input from "../common/Input";
 
 const Login = ({ login, isAuthenticated }) => {
   const [state, setState] = useState({
@@ -28,26 +31,19 @@ const Login = ({ login, isAuthenticated }) => {
       <div className="card card-body mt-5">
         <h2 className="text-center">Login</h2>
         <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <label htmlFor="Username">Username</label>
-            <input
-              type="text"
-              name="username"
-              className="form-control"
-              onChange={onChange}
-              value={username}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control"
-              onChange={onChange}
-              value={password}
-            />
-          </div>
+          <Input
+            label="Username"
+            onChange={onChange}
+            name="username"
+            value={username}
+          />
+          <Input
+            label="Password"
+            type="password"
+            onChange={onChange}
+            name="password"
+            value={password}
+          />
           <div className="form-group">
             <button type="submit" className="btn btn-primary">
               Login
