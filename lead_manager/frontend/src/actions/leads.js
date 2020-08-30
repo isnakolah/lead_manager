@@ -20,9 +20,9 @@ export const getLeads = () => (dispatch, getState) => {
 };
 
 // DELETE LEAD
-export const deleteLead = id => dispatch => {
+export const deleteLead = id => (dispatch, getState) => {
   axios
-    .delete(`/api/leads/${id}/`)
+    .delete(`/api/leads/${id}/`, tokenConfig(getState))
     .then(res => {
       dispatch(createMessage({ deleteLead: "Lead Deleted" }));
       dispatch({
@@ -36,9 +36,9 @@ export const deleteLead = id => dispatch => {
 };
 
 // ADD LEAD
-export const addLead = lead => dispatch => {
+export const addLead = lead => (dispatch, getState) => {
   axios
-    .post("/api/leads/", lead)
+    .post("/api/leads/", lead, tokenConfig(getState))
     .then(res => {
       dispatch(createMessage({ addLead: "Lead Added" }));
       dispatch({
