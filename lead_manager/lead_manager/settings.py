@@ -63,9 +63,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lead_manager.wsgi.application'
 
-
 # development
-print(config('DB_PASSWORD'))
 if config('MODE') == "dev":
     DATABASES = {
         'default': {
