@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'accounts',
     'leads',
     'rest_framework',
-    'frontend',
+    'frontend.frontend.FrontendConfig',
     'knox',
     'django.contrib.admin',
     'django.contrib.auth',

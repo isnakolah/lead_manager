@@ -40,7 +40,6 @@ Current directory: **\$**
 
 ```sh
 # Clone the github repo, you must have git installed locally
-
 $ git clone https://github.com/isnakolah/lead_manager.git
 
 ```
@@ -81,7 +80,7 @@ $ pip install -r requirements.txt
 
 ## Running the application
 
-Open a seperate terminal in the base folder for this project **\$** _\ lead_manager/_
+Open a seperate terminal in the base folder for this project **\$** _lead_manager/_
 
 ```sh
 # In the base directory of the project, run the dev script
