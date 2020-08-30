@@ -14,7 +14,8 @@ const Register = () => {
     console.log("submit");
   };
 
-  const onChange = e => setState({ [e.target.name]: e.target.value });
+  const onChange = ({ target }) =>
+    setState({ ...state, [target.name]: target.value });
 
   const { username, email, password, password2 } = state;
   return (
